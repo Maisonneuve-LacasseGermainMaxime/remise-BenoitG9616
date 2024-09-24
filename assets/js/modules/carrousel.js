@@ -19,3 +19,17 @@ buttons.forEach(button => {
     delete activeSlide.dataset.active
   })
 })
+
+const autoloop = () => {
+  const slides = document.querySelector("[data-carousel]").querySelector("[data-slides]")
+  const activeSlide = slides.querySelector("[data-active]")
+
+  let newIndex = [...slides.children].indexOf(activeSlide) + 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+}
+
+// 
+setInterval(autoloop, 5000)
