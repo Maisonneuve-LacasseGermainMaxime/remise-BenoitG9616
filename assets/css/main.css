@@ -35,3 +35,31 @@ body, html {
     display: flex;
     flex-direction: column;
   }
+
+/* Styles pour le thème clair (par défaut) */
+body[data-theme="light"] {
+  background-color: white;
+  color: black;
+}
+
+/* Styles pour le thème sombre */
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: white;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style pour le bouton de basculement */
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
