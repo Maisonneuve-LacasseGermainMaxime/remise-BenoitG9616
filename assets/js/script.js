@@ -42,11 +42,11 @@ function generateProductList() {
       listItem.id = `product-${product.id}`;
   
       // Générer le chemin de l'image
-      const imagePath = `assets/img/produits/${product.name.replace(/\s+/g, '-').toLowerCase()}.png`;
+      const imagePath = `../../assets/img/produits/${product.name.replace(/\s+/g, '-').toLowerCase()}.png`;
   
       // Ajouter le contenu HTML pour chaque produit
       listItem.innerHTML = `
-        <img src="${imagePath}" alt="${product.name}">
+        <img src="../../assets/img/${imagePath}" alt="${product.name}">
         <h3>${product.name}</h3>
         <p>Prix: ${product.price}</p>
         <p>Description: ${product.description}</p>
