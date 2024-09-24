@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Page</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <header>
+    <nav class="main-navigation"></nav>
+</header>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Content for the sidebar goes here.</p>
+    </div>
+    <div class="main-content">
+      <h2>Main Content</h2>
+      <p>Content for the main area goes here.</p>
+      <div class="sort-buttons">
+        <button onclick="sortProducts('alpha-asc')">A-Z</button>
+        <button onclick="sortProducts('alpha-desc')">Z-A</button>
+        <button onclick="sortProducts('price-asc')">Prix Croissant</button>
+        <button onclick="sortProducts('price-desc')">Prix Décroissant</button>
+      </div>
+      <div id="product-list" class="product-grid"></div>
+    </div>
+    <aside class="product-detail">
+        <h2>Details du Produit</h2>
+        <div id="product-detail-content">
+          <!-- Détails du produit cliqué -->
+        </div>
+      </aside>
+  </div>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+</body>
+</html>
