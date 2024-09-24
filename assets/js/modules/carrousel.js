@@ -1,5 +1,8 @@
+// 
+// Selectionne les boutons previous et next 
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
+// Fait en sorte que chaque boutton fonctionne pour avancer ou reculer les images
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     const offset = button.dataset.carouselButton === "next" ? 1 : -1
