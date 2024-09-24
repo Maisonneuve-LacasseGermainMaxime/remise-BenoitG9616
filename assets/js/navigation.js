@@ -1,11 +1,11 @@
 // Tableau contenant les liens de la navigation
 const navigationLinks = [
-    { text: 'Accueil', page: '../index.html' },
-    { text: 'À propos', page: '../../pages/apropos.html' },
-    { text: 'Formulaire', page: '../../pages/formulaire.html' },
-    { text: 'Services', page: '../../pages/services.html' },
-    { text: 'Publicite', page: '../../pages/publicite.html' },
-    { text: 'Contact', page: '../../pages/contact.html' }
+    { text: 'Accueil', page: 'index.html' },
+    { text: 'À propos', page: 'pages/apropos.html' },
+    { text: 'Formulaire', page: 'pages/formulaire.html' },
+    { text: 'Services', page: 'pages/services.html' },
+    { text: 'Publicite', page: 'pages/publicite.html' },
+    { text: 'Contact', page: 'pages/contact.html' }
 ];
 
 // Fonction pour générer la navigation dynamiquement
