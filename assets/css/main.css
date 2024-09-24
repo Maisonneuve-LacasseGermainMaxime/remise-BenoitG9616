@@ -1,0 +1,37 @@
+@import url(../css/stylesbasis/produits.css);
+@import url(../css/stylesbasis/navigation.css);
+@import url(../css/stylesbasis/formulaire.css);
+@import url(../css/publicite/carrousel.css);
+@import url(../css/publicite/publicite.css);
+
+  /* Styles de base pour la page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Conteneur principal avec Flexbox */
+  .container {
+    display: flex;
+    height: 100vh; /* Hauteur de la fenêtre */
+  }
+  
+  /* Sidebar (1/4 de la largeur) */
+  .sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+/* Contenu principal (3/4 de la largeur) */
+.main-content {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
