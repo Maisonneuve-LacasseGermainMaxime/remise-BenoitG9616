@@ -1,6 +1,6 @@
 // Tableau contenant les liens de la navigation
 const navigationLinks = [
-    { text: 'Accueil', page: '../pages/index.html' },
+    { text: 'Accueil', page: 'index.html' },
     { text: 'À propos', page: '../pages/apropos.html' },
     { text: 'Formulaire', page: '../pages/formulaire.html' },
     { text: 'Services', page: '../pages/services.html' },
