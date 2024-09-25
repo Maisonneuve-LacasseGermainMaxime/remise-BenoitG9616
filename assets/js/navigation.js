@@ -21,31 +21,38 @@ function generateNavigation() {
         
         // Mise en évidence du lien de la page courante
         if (link.page === currentPage) {
-            aElement.style.fontWeight = 'bold';
-            aElement.style.textDecoration = 'underline';
-            aElement.style.color = 'red';
-        }
+            aElement.classList.add('pagecourante');
+            console.log('Classe ajouter pour la page courante', link.text);
+        };
 
         navElement.appendChild(aElement);
         console.log(`Lien ajouté : ${link.text} -> ${link.page}`);
     });
 
     //Bouton mode sombre
-    const buttonElement = document.createElement('button');
+    const mainContentElement = document.querySelector('.main-content')
+    const sideBarElement = document.querySelector('.sidebar')
+    const themeToggleButton = document.createElement('button')
     themeToggleButton.textContent = 'Mode Sombre';
     themeToggleButton.style.marginLeft = '20px';
     
-    theme.themeToggleButton.addEventListener('click', () => {
+    themeToggleButton.addEventListener('click', () => {
         const bodyElement = document.body;
         const currentTheme = bodyElement.getAttribute('data-theme');
 
-        if (currentTheme === 'light' || !currentTheme){
+        if (currentTheme === 'light' || !currentTheme) {
             bodyElement.setAttribute('data-theme', 'dark');
-            themeToggleButton.textContent = 'Mode Clair'
+            mainContentElement.setAttribute('data-theme', 'dark');
+            sideBarElement.setAttribute('data-theme', 'dark');
+            themeToggleButton.textContent = 'Mode Clair';
+            console.log('Mode sombre appliquer');
         } else {
             bodyElement.setAttribute('data-theme', 'light');
-            themeToggleButton.textContent = 'Mode Sombre'
-        }
+            mainContentElement.setAttribute('data-theme', 'light');
+            sideBarElement.setAttribute('data-theme', 'light');
+            themeToggleButton.textContent = 'Mode Sombre';
+            console.log('Mode Clair appliquer');
+        } 
     });
 
     navElement.appendChild(themeToggleButton);

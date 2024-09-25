@@ -21,7 +21,6 @@ body, html {
   /* Sidebar (1/4 de la largeur) */
   .sidebar {
     flex: 1;
-    background-color: #f4f4f4;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -29,7 +28,6 @@ body, html {
 /* Contenu principal (3/4 de la largeur) */
 .main-content {
     flex: 3;
-    background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -42,8 +40,28 @@ body[data-theme="light"] {
   color: black;
 }
 
+body[data-theme="light"] > .main-content{
+  background-color: white;
+  color: black;
+}
+
+body[data-theme="dark"] > .sidebar{
+  background-color: white;
+  color: black;
+}
+
 /* Styles pour le thème sombre */
 body[data-theme="dark"] {
+  background-color: #121212;
+  color: white;
+}
+
+body[data-theme="dark"] > .main-content{
+  background-color: #121212;
+  color: white;
+}
+
+body[data-theme="dark"] > .sidebar{
   background-color: #121212;
   color: white;
 }
@@ -62,4 +80,10 @@ nav a {
 button {
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.pagecourante {
+  font-weight: bold;
+  text-decoration: underline;
+  color: red;
 }

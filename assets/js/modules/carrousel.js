@@ -1,4 +1,4 @@
-// 
+// Source : https://www.youtube.com/watch?v=9HcxHDS2w1s&t=724s&ab_channel=WebDevSimplified / https://javascriptsimplified.com/ 
 // Selectionne les boutons previous et next 
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
@@ -32,4 +32,4 @@ const autoloop = () => {
 }
 
 // 
-setInterval(autoloop, 5000)
+setInterval(autoloop, 4000)
