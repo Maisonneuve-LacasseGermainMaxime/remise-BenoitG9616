@@ -1,11 +1,11 @@
 // Tableau contenant les liens de la navigation
 const navigationLinks = [
-    { text: 'Accueil', page: '../index.html' },
-    { text: 'À propos', page: 'pages/apropos.html' },
-    { text: 'Formulaire', page: 'pages/formulaire.html' },
-    { text: 'Services', page: 'pages/services.html' },
-    { text: 'Publicite', page: 'pages/publicite.html' },
-    { text: 'Contact', page: 'pages/contact.html' }
+    { text: 'Accueil', page: '/index.html' },
+    { text: 'À propos', page: '/pages/apropos.html' },
+    { text: 'Formulaire', page: '/pages/formulaire.html' },
+    { text: 'Services', page: '/pages/services.html' },
+    { text: 'Publicite', page: '/pages/publicite.html' },
+    { text: 'Contact', page: '/pages/contact.html' }
 ];
 
 // Fonction pour générer la navigation dynamiquement
@@ -18,9 +18,9 @@ function generateNavigation() {
         const aElement = document.createElement('a');
         aElement.textContent = link.text;
         aElement.href = link.page;
-        
+        console.log(link.page, currentPage);
         // Mise en évidence du lien de la page courante
-        if (link.page === currentPage) {
+        if (link.page.includes(currentPage)) {
             aElement.classList.add('pagecourante');
             console.log('Classe ajouter pour la page courante', link.text);
         };

@@ -6,7 +6,11 @@
   }
   
   .main-navigation a {
-    color: white; /* Change l
-    text-decoration: none; /* Enlève le soulignement des liens */
     padding: 0 15px; /* Ajoute du padding autour des liens */
   }
+
+  .main-navigation a.pagecourante {
+      font-weight: bold;
+      text-decoration: underline;
+      color: red;
+    }
