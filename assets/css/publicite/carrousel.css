@@ -4,16 +4,27 @@
 
 .carousel {
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+  overflow: hidden;
 }
 
-.carousel > ul{
+.carousel > ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 100%;
+  height: 100%;
 }
 
 .slide {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center slide within the container */
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
@@ -44,7 +55,7 @@
   cursor: pointer;
   border-radius: .25rem;
   padding: 0 .5rem;
-  background-color: black
+  background-color: black;
 }
 
 .carousel-button:hover,
