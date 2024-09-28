@@ -5,6 +5,7 @@
 @import url(../css/publicite/publicite.css);
 @import url(../css/stylesbasis/theme-toggle-btn.css);
 @import url(../css/stylesbasis/loading.css);
+@import url(../css/stylesbasis/theme.css);
 
   /* Styles de base pour la page */
 body, html {
@@ -36,37 +37,7 @@ body, html {
     flex-direction: column;
   }
 
-/* Styles pour le thème clair (par défaut) */
-body[data-theme="light"] {
-  background-color: white;
-  color: black;
-}
 
-body[data-theme="light"] > .main-content{
-  background-color: white;
-  color: black;
-}
-
-body[data-theme="dark"] > .sidebar{
-  background-color: white;
-  color: black;
-}
-
-/* Styles pour le thème sombre */
-body[data-theme="dark"] {
-  background-color: #121212;
-  color: white;
-}
-
-body[data-theme="dark"] > .main-content{
-  background-color: #121212;
-  color: white;
-}
-
-body[data-theme="dark"] > .sidebar{
-  background-color: #121212;
-  color: white;
-}
 
 nav {
   margin-bottom: 20px;
@@ -76,10 +47,4 @@ nav a {
   margin-right: 15px;
   text-decoration: none;
   color: inherit;
-}
-
-/* Style pour le bouton de basculement */
-button {
-  padding: 5px 10px;
-  cursor: pointer;
 }

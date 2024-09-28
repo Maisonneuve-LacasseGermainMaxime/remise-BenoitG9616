@@ -15,3 +15,6 @@
       color: red;
     }
 
+  .main-navigation a:hover{
+    background-color: tomato;
+  }
