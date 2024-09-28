@@ -24,10 +24,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center slide within the container */
+  transform: translate(-50%, -50%) scale(1.1); 
   opacity: 0;
-  transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transform: translate(-50%, -50%) scale(1); 
+  transition-delay: 0ms; 
 }
 
 .slide > img {
@@ -36,12 +42,6 @@
   height: 500px;
   object-fit: cover;
   object-position: center;
-}
-
-.slide[data-active] {
-  opacity: 1;
-  z-index: 1;
-  transition-delay: 0ms;
 }
 
 .carousel-button {
