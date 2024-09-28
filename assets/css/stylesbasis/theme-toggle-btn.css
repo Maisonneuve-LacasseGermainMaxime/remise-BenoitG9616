@@ -1,0 +1,12 @@
+.theme-toggle-btn{
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.theme-toggle-btn:hover{
+    background-color: #0056b3;
+}

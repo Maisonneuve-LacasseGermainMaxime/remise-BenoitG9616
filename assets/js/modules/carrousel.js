@@ -20,6 +20,7 @@ buttons.forEach(button => {
   })
 })
 
+// Configure un autoloop des images du carrousel.
 const autoloop = () => {
   const slides = document.querySelector("[data-carousel]").querySelector("[data-slides]")
   const activeSlide = slides.querySelector("[data-active]")
