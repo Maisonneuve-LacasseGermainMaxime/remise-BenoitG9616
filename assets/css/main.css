@@ -1,13 +1,14 @@
 @import url(../css/stylesbasis/produits.css);
 @import url(../css/stylesbasis/navigation.css);
 @import url(../css/stylesbasis/formulaire.css);
+@import url(../css/publicite/scrollanimation.css);
 @import url(../css/publicite/carrousel.css);
 @import url(../css/publicite/publicite.css);
 @import url(../css/stylesbasis/theme-toggle-btn.css);
 @import url(../css/stylesbasis/loading.css);
 @import url(../css/stylesbasis/theme.css);
 @import url(../css/stylesbasis/modale.css);
-@import url(../css/publicite/scrollanimation.css);
+
 
   /* Styles de base pour la page */
 body, html {

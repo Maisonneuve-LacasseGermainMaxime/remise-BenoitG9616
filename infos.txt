@@ -1,14 +1,9 @@
-Dans un document texte, vous devez expliquer les fonctionnalités de votre page, les choix de design et les
-difficultés rencontrées. Vous devez également expliquer comment vous avez structuré votre code et
-comment vous avez organisé vos fichiers. Vous devez également expliquer comment vous avez testé votre
-page et comment vous avez assuré la qualité de votre code.
-
 Fonctionnalités 
     La page publicitaire contient en premier lieu le carrousel qui contient 6 images différentes en rotation continue (autoloop). Le carrousel a aussi 2 boutons permettant d'avancer ou reculer pour revoir une image spécifique. Il y a aussi un leger fondu pour le changement d'image 
     Il y a un image du logo a gauche en rotation continuelle. C'est la première animation que j'ai mise sur la page et sincérement je trouvais qu'elle ressortait bien avec la couleur du logo. Il y a aussi un effet d'agrandissement leger
     Une copie du logo (avec une couleur différente) sert pour l'animation de chargement au changement de page.
     Un bouton Mode Sombre / Mode Clair fonctionne pour le changement du thème de la page web (entre mode sombre et mode clair) et le tout est sauvegarder dans le localstorage du site qui permet de garder le même thème au changement de page. Il y a aussi un effet de fondu au changement de theme.
-    scrollanimation gere le mouvement des 2 derniers paragraphes a gauche de ma page publicité
+    scrollanimation gere le mouvement des 2 derniers paragraphes a gauche de ma page publicité (ne fonctionne pas) mais j'ai ajouté le fait que le texte grossis quand il est sélectionné via hover (si on passe la souris sur les titres).
 
 Organisation Fichier / Code
     J'ai fait une organisation qui me semblait initiallement logique mais je ne penses pas qu'elle soit parfaite (loin de la). 
@@ -36,4 +31,19 @@ Organisation Fichier / Code
                 scrollanimation gere mon animation de scrolling de la page publicite (principalement le mouvement des 2 derniers paragraphes a gauche de ma page publicite)
 
 Brève description de l'organisation du code
-    Je dois avouer que mon organisation de mon code est plus que décevante à mon avis. Bien que mes fichiers me permettent de me retrouver dans mon code, il ne serait pas du tout évident pour un autre programmeur de passer au travers de celui-ci. J'ai essayer de mettre mon CSS en fonction des pages qu'il modifie (d'ou l'utilisation d'un dossier publicite servant a gerer les changements de cette page la)
+    Je dois avouer que mon organisation de mon code est plus que décevante à mon avis. Bien que mes fichiers me permettent de me retrouver dans mon code, il ne serait pas du tout évident pour un autre programmeur de passer au travers de celui-ci. 
+    J'ai essayer de mettre mon CSS en fonction des pages qu'il modifie (d'ou l'utilisation d'un dossier publicite servant a gerer les changements de cette page la) qui fonctionne pour la majorité du temps (et du moins dans mes tests le tout fonctionne).
+    J'ai mis mes modules pour la majorité de mes scripts de ma page produit dans un dossier module mais je n'ai pas fait de import/export des fonctions (la majorité de mes tests quand j'ai tenté de le faire ne fonctionnait pas malheureusement).
+
+    Ma logique pour le JS était de mettre mes modules ensemble et de faire 1 page js principale pour chaque page qui aurait juste appeller les fonctions donc moins de code a parcourir pour faire des tests mais je ne me suis pas rendu là. 
+
+Test de la page et qualité du code
+    De manière générale mon code était testé via Live Server et avec l'utilisation de la console ouverte. Je mettais des console.log au endroit que je souhaitais tester et regardait ce qui se passait si mon code ne fonctionnait pas comme il le faut. Je me fis beaucoup au message d'erreur remis par la console pour essayer de comprendre et résoudre mes erreurs. Si jamais j'ai une erreur que je ne comprends pas du tout, je vais l'entrer dans Google et essayer de voir si je trouve un forum parlant de cette erreur là. En dernier recours, je vais passer l'erreur sur ChatGPT pour avoir une idée générale (ou surtout un autre paire d'oeil même si on parle d'oeil de robot ici).
+
+    J'ai essayé de rendre mon code avant tout fonctionnel versus le rendre *beau* si je peux me permettre l'expression. Je pense que si j'aurais mis un peu plus de temps dans l'ajout de export/import des scripts cela rendrait le code beaucoup plus simple a regarder et à relire pour quelqu'un d'autre que moi même. Je pense que de manière générale, le tout demeure logique mais c'est définitivement pas parfait
+
+GitHub Pages
+    Je ne sais pas si c'est juste moi qui ne comprends pas comment c'est censé fonctionner mais bien que ma page fonctionne via LiveServer, mon expérience sur GitHub Pages est horrible. Mon site est pas fonctionnel du tout et mon code agit de manière différente que ce qui se passe dans Live Server.
+
+Conclusion
+    En toute honnêteté, je ne me sens pas super à l'aise avec la remise du projet et je trouve cela assez frustrant. Je n'ai que moi à reprocher ici vu ma quantité d'absence au cours mais je suis assez frustré avec moi-même. Je penses avoir un bon potentiel en programmation et j'adore créer des choses via le code mais je trouve très honnêtement que mon projet n'est pas super bon. Je sais que je peux mieux faire.
