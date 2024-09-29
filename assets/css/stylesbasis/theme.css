@@ -4,6 +4,10 @@ body[data-theme="light"] {
     color: black;
   }
   
+  body, .main-content, .sidebar{
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
   body[data-theme="light"] > .main-content{
     background-color: white;
     color: black;

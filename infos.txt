@@ -1,0 +1,39 @@
+Dans un document texte, vous devez expliquer les fonctionnalités de votre page, les choix de design et les
+difficultés rencontrées. Vous devez également expliquer comment vous avez structuré votre code et
+comment vous avez organisé vos fichiers. Vous devez également expliquer comment vous avez testé votre
+page et comment vous avez assuré la qualité de votre code.
+
+Fonctionnalités 
+    La page publicitaire contient en premier lieu le carrousel qui contient 6 images différentes en rotation continue (autoloop). Le carrousel a aussi 2 boutons permettant d'avancer ou reculer pour revoir une image spécifique. Il y a aussi un leger fondu pour le changement d'image 
+    Il y a un image du logo a gauche en rotation continuelle. C'est la première animation que j'ai mise sur la page et sincérement je trouvais qu'elle ressortait bien avec la couleur du logo. Il y a aussi un effet d'agrandissement leger
+    Une copie du logo (avec une couleur différente) sert pour l'animation de chargement au changement de page.
+    Un bouton Mode Sombre / Mode Clair fonctionne pour le changement du thème de la page web (entre mode sombre et mode clair) et le tout est sauvegarder dans le localstorage du site qui permet de garder le même thème au changement de page. Il y a aussi un effet de fondu au changement de theme.
+    scrollanimation gere le mouvement des 2 derniers paragraphes a gauche de ma page publicité
+
+Organisation Fichier / Code
+    J'ai fait une organisation qui me semblait initiallement logique mais je ne penses pas qu'elle soit parfaite (loin de la). 
+    J'ai mis l'index du site (page accueuil) a la racine du projet. J'ai ajouté 2 dossiers (pages et assets).
+        Pages = contient chaque page du site autre que l'index. Ce fichier contient uniquement mon code HTML
+        Assets est séparé en 4 dossiers = css, img, js et modules.
+            CSS contient un premier fichier appelé main.css qui contient mon css de base et appelle les autres fichiers CSS (donc mes pages vont utiliser le fichier main.css comme fichier style et le fichier style appelle lui les autres fichiers de style que j'ai ajouté au fur et a mesure). 
+                CSS contient 2 sous dossiers (publicite et stylesbasis)
+                    publicite contient tout le css de ma page publicitaire (le carrousel, l'animation du logo astra et les effets sur le texte pour l'animation au scrolling).
+                    stylesbasis contient le reste de mes fichiers de styles (donc la navigation, la boite modale, l'animation de loading, le bouton de theme et les themes en soi (avec l'animation)).
+            img contient 3 sous dossiers pour les images du projets
+                carrousel contient les images utiliser dans le carrousel
+                modale contient l'unique image de la boite modale (qui ne fonctionne pas pour des raisons qui m'échappent sincérement et je ne voulais pas mettre trop de temps dessus)
+                produits contient finalement les images des produits offerts dans ma page services
+            js contient le js de base de mes pages
+                accueil est vide
+                formulaire est pour mon formulaire
+                navigation gere ma navigation et la logique de mon bouton de changement de theme (que j'ai gardé avec ma navigation)
+                script est vide mais devrait servir de fichier qui appelle mes modules et divers script pour les pages en question
+            modules contient finalement la majorité de mes animations 
+                carrousel gere ici le scriptage de mon carrousel ainsi que les boutons de celui-ci. L'autoloop se retrouve ici aussi.
+                logo-astra est assez simple et gere l'animation du logo astra (le logo astra est l'image au dessus du About sur ma page Publicite)
+                modale gere la logique de ma boite modale 
+                product gere la logique de ma page Services 
+                scrollanimation gere mon animation de scrolling de la page publicite (principalement le mouvement des 2 derniers paragraphes a gauche de ma page publicite)
+
+Brève description de l'organisation du code
+    Je dois avouer que mon organisation de mon code est plus que décevante à mon avis. Bien que mes fichiers me permettent de me retrouver dans mon code, il ne serait pas du tout évident pour un autre programmeur de passer au travers de celui-ci
