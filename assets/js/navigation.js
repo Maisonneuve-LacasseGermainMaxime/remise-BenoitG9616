@@ -36,28 +36,45 @@ function generateNavigation() {
     themeToggleButton.textContent = 'Mode Sombre';
     themeToggleButton.classList.add('theme-toggle-btn');
     
+    // Apply the stored theme from localStorage
+    applyStoredTheme(themeToggleButton, mainContentElement, sideBarElement);
+
     themeToggleButton.addEventListener('click', () => {
         const bodyElement = document.body;
         const currentTheme = bodyElement.getAttribute('data-theme');
 
         if (currentTheme === 'light' || !currentTheme) {
-            bodyElement.setAttribute('data-theme', 'dark');
-            mainContentElement.setAttribute('data-theme', 'dark');
-            sideBarElement.setAttribute('data-theme', 'dark');
-            themeToggleButton.textContent = 'Mode Clair';
-            console.log('Mode sombre appliqué');
+            setTheme('dark', themeToggleButton, mainContentElement, sideBarElement);
         } else {
-            bodyElement.setAttribute('data-theme', 'light');
-            mainContentElement.setAttribute('data-theme', 'light');
-            sideBarElement.setAttribute('data-theme', 'light');
-            themeToggleButton.textContent = 'Mode Sombre';
-            console.log('Mode clair appliqué');
+            setTheme('light', themeToggleButton, mainContentElement, sideBarElement);
         } 
     });
 
     navElement.appendChild(themeToggleButton);
 
     addNavigationClickEvents();  // Ajouter les événements de clic après avoir créé les liens
+}
+
+// Fonction pour appliquer le thème stocké dans localStorage
+function applyStoredTheme(themeToggleButton, mainContentElement, sideBarElement) {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+        setTheme(storedTheme, themeToggleButton, mainContentElement, sideBarElement);
+    }
+}
+
+// Fonction pour changer le thème et le sauvegarder dans localStorage
+function setTheme(theme, themeToggleButton, mainContentElement, sideBarElement) {
+    const bodyElement = document.body;
+    bodyElement.setAttribute('data-theme', theme);
+    mainContentElement.setAttribute('data-theme', theme);
+    sideBarElement.setAttribute('data-theme', theme);
+
+    // Mise à jour du bouton en fonction du thème
+    themeToggleButton.textContent = theme === 'dark' ? 'Mode Clair' : 'Mode Sombre';
+
+    // Stocker le thème dans localStorage
+    localStorage.setItem('theme', theme);
 }
 
 // Fonction pour ajouter des événements de clic sur les liens de navigation
