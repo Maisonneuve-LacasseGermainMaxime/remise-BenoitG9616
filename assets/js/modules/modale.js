@@ -4,8 +4,11 @@ const closeModalSpan = document.querySelector(".close");
 
 // Ouvrir la modal automatiquement au chargement de la page
 window.addEventListener("DOMContentLoaded", function() {
-    modal.style.display = "flex"; // Afficher la modal
+    setTimeout(function() {
+        modal.style.display = "flex"; // Afficher la modal après 5 secondes
+    }, 5000);
 });
+
 
 // Fermer la modal quand l'utilisateur clique sur le <span> (x)
 closeModalSpan.addEventListener("click", function() {
