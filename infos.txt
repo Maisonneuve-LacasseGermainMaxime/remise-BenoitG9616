@@ -21,7 +21,7 @@ Organisation Fichier / Code
                     stylesbasis contient le reste de mes fichiers de styles (donc la navigation, la boite modale, l'animation de loading, le bouton de theme et les themes en soi (avec l'animation)).
             img contient 3 sous dossiers pour les images du projets
                 carrousel contient les images utiliser dans le carrousel
-                modale contient l'unique image de la boite modale (qui ne fonctionne pas pour des raisons qui m'échappent sincérement et je ne voulais pas mettre trop de temps dessus)
+                modale contient l'unique image de la boite modale
                 produits contient finalement les images des produits offerts dans ma page services
             js contient le js de base de mes pages
                 accueil est vide
@@ -36,4 +36,4 @@ Organisation Fichier / Code
                 scrollanimation gere mon animation de scrolling de la page publicite (principalement le mouvement des 2 derniers paragraphes a gauche de ma page publicite)
 
 Brève description de l'organisation du code
-    Je dois avouer que mon organisation de mon code est plus que décevante à mon avis. Bien que mes fichiers me permettent de me retrouver dans mon code, il ne serait pas du tout évident pour un autre programmeur de passer au travers de celui-ci
+    Je dois avouer que mon organisation de mon code est plus que décevante à mon avis. Bien que mes fichiers me permettent de me retrouver dans mon code, il ne serait pas du tout évident pour un autre programmeur de passer au travers de celui-ci. J'ai essayer de mettre mon CSS en fonction des pages qu'il modifie (d'ou l'utilisation d'un dossier publicite servant a gerer les changements de cette page la)
